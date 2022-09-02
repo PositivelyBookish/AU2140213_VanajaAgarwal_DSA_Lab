@@ -1,3 +1,6 @@
+//AU2140213 Vanaja Agarwal
+//Q4. Game of Life
+
 #include <bits/stdc++.h>
 using namespace std;
 
