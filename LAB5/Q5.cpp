@@ -7,10 +7,12 @@ using namespace std;
 
 void merge(int arr[], int low, int mid, int high)
 {
-
+    
+    // Dividing the main array into two parts (from mid to leftmost part and from mid to rightmost part).
     int n1 = mid - low + 1, n2 = high - mid;
     int left[n1], right[n2];
 
+    // Sorting the two divided arrays .
     for (int i = 0; i < n1; i++)
         left[i] = arr[i + low];
 
@@ -19,6 +21,7 @@ void merge(int arr[], int low, int mid, int high)
 
     int i = 0, j = 0, k = low;
 
+    // Comparing the two arrays and adding them to the main array using the kth index.
     while (i < n1 && j < n2)
     {
         if (left[i] <= right[j])
@@ -28,6 +31,7 @@ void merge(int arr[], int low, int mid, int high)
             arr[k++] = right[j++];
     }
 
+    // Adding the remaining elements if there are any which are already sorted.
     while (i < n1)
         arr[k++] = left[i++];
 
@@ -49,10 +53,10 @@ void mergeSort(int arr[], int low, int r)
 int main()
 {
 
-    int a[] = {10, 5, 30, 15, 7};
-    int l = 0, r = 4;
+    int array[] = {10, 5, 30, 15, 7, 89, 91};
+    int left = 0, right = (sizeof(array)/sizeof(int))-1;
 
-    mergeSort(a, l, r);
-    for (int x : a)
+    mergeSort(array, left, right);
+    for (int x : array)
         cout << x << " ";
 }

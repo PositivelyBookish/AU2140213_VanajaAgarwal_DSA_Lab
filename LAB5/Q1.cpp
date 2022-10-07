@@ -1,4 +1,4 @@
-// Vanaja Agarwal AU2140213
+//  AU2140213 Vanaja Agarwal
 // Implementation of Optimised Bubble Sort
 
 #include <bits/stdc++.h>
