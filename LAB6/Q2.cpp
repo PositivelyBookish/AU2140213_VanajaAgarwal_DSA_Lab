@@ -1,3 +1,7 @@
+//AU2140213 VANAJA BINAY AGARWAL
+//Q2.
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
